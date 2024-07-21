@@ -1,0 +1,14 @@
+body {
+    background-color: #f0efef;
+}
+
+.font {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+body {
+    margin: 0;
+}
