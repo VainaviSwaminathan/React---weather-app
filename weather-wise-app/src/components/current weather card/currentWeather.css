@@ -1,0 +1,66 @@
+/* src/components/currentWeather.css */
+#current-weather-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 350px;
+    padding: 0 40px;
+    text-align: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgb(201, 210, 224);
+    color: black;
+}
+
+#current-weather-card img {
+    width: 80px;
+    height: 80px;
+}
+
+.title_current_weather {
+    /* border: 1px solid white; */
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title_current_weather p {
+    font-size: 18px;
+}
+
+.subtitle_current_weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subtitle_current_weather h1 {
+    font-size: 40px;
+    color: black;
+}
+
+.addInfo_current_weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addInfo_current_weather p {
+    color: white;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(40, 58, 90);
+    font-size: 12px;
+    width: 85px;
+    /* border: 1px solid white; */
+    border-radius: 30px;
+}
+
+#current-weather-card .material-symbols-outlined {
+    color: white;
+}

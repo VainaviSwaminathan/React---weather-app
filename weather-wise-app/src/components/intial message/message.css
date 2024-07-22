@@ -1,0 +1,14 @@
+/* src/components/message.css */
+.message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 250px);
+    /* Adjust this value based on the height of your navbar */
+    text-align: center;
+}
+
+.message-container h1 {
+    font-size: 1.5rem;
+    color: rgb(40, 58, 90);
+}

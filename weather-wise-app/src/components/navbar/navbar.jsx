@@ -1,6 +1,39 @@
 import './navbar.css'
+import React, { useState } from 'react'
+import axios from 'axios';
 
-function Navbar() {
+function Navbar({ onSearch }) {
+
+    const [city, setCity] = useState('')
+
+    async function handleSearch() {
+        try {
+
+            const currentWeather = await axios({
+                method: 'get',
+                url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c106ca56f8a7ef1a5ba4381e1fbabff6`
+            })
+
+            const mapSrc = `https://maps.google.com/maps?q=${city}&t=&z=13&ie=UTF8&iwloc=&output=embed`
+
+            const forecastResponse = await axios.get(
+                `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=c106ca56f8a7ef1a5ba4381e1fbabff6`
+            );
+            const forecastData = forecastResponse.data.list.filter((_, index) => index % 8 === 0);
+
+            console.log(currentWeather)
+
+            onSearch(currentWeather.data, mapSrc, forecastData)
+        }
+        catch (error) {
+            console.log("error fetching data", error)
+
+        }
+    }
+
+
+
+
     return (
         <nav>
             <h1 className="font">WeatherWise</h1>
@@ -9,10 +42,10 @@ function Navbar() {
                     <span className="material-symbols-outlined">
                         search
                     </span>
-                    <input id="search" type="text" placeholder='Enter city name' />
-                    <button>Search</button>
+                    <input id="search" type="text" placeholder='Enter city name' onChange={(e) => setCity(e.target.value)} />
+                    <button onClick={handleSearch}>Search</button>
                 </div>
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined">
                     help
                 </span>
             </div>

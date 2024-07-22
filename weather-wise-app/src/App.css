@@ -1,5 +1,6 @@
 body {
     background-color: #f0efef;
+    margin: 0;
 }
 
 .font {
@@ -9,6 +10,22 @@ body {
 }
 
 
-body {
-    margin: 0;
+main {
+
+    width: 80%;
+    margin: auto;
+}
+
+.current_weather {
+    /* border: 1px solid black; */
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.forecast {
+    /* border: 1px solid black; */
+    margin-top: 50px;
+
 }
