@@ -1,0 +1,9 @@
+.forecast-container {
+
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+}

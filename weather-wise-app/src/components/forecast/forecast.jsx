@@ -17,6 +17,7 @@ const Forecast = ({ forecastData }) => {
                     day={days[(new Date().getDay() + index) % 7]}
                     temp={dayData.main.temp - 273.15}
                     weather={dayData.weather[0].main}
+                    icon={forecastData[index].weather[0].icon}
                 />
             ))}
         </div>

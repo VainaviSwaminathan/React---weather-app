@@ -2,7 +2,7 @@ import './navbar.css'
 import React, { useState } from 'react'
 import axios from 'axios';
 
-function Navbar({ onSearch }) {
+function Navbar({ onSearch, onError }) {
 
     const [city, setCity] = useState('')
 
@@ -21,12 +21,13 @@ function Navbar({ onSearch }) {
             );
             const forecastData = forecastResponse.data.list.filter((_, index) => index % 8 === 0);
 
-            console.log(currentWeather)
+            console.log(forecastData)
 
             onSearch(currentWeather.data, mapSrc, forecastData)
         }
         catch (error) {
             console.log("error fetching data", error)
+            onError()
 
         }
     }
